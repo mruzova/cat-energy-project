@@ -25,14 +25,18 @@
 
         </picture>
         <span class="logo-text"> <b>CAT</b> ENERGY</span>
-        <button class="mobile-menu"
-                type="button">|||</button>
+        <button id="mob-menu"
+                class="mobile-menu"
+                type="button"
+                onclick="myFunction()">|||</button>
         <nav class="menu">
-          <ul>
+          <ul id="myLinks">
             <li class="list-menu"><a href="#"
                  class="main-item">ГЛАВНАЯ </a></li>
-            <li class="list-menu"><a href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a></li>
-            <li class="list-menu"><a href="form.html">ПОДБОР ПРОГРАММЫ</a></li>
+            <li class="list-menu"><a class="ind"
+                 href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a></li>
+            <li class="list-menu"><a class="ind"
+                 href="form.html">ПОДБОР ПРОГРАММЫ</a></li>
           </ul>
         </nav>
 
@@ -42,11 +46,12 @@
 
     <main>
       <div class="intro">
-        <div class="description">
+        <div class="description"
+             id="desc">
           <h1>Функциональное питание для котов </h1>
           <p>Занялся собой? Займись котом!</p>
           <button type="button"
-                  class="progr">ПОДОБРАТЬ ПРОГРАММУ</button>
+                  class="progr"><a href="form.html">ПОДОБРАТЬ ПРОГРАММУ</a></button>
 
         </div>
         <img src="img/index-can.png"
@@ -220,5 +225,21 @@
       </div>
 
     </footer>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        var y = document.getElementById("desc");
+        var z = document.getElementById("mob-menu");
+        if (x.style.display === "none") {
+          x.style.display = "flex"
+          y.style.zIndex = 0;
+          z.style.backgroundImage = 'url("img/m-close.png")';
+        } else {
+          x.style.display = "none";
+          y.style.zIndex = 1;
+          z.style.backgroundImage = 'url("img/mobile-menu.png")';
+        }
+      }
+    </script>
   </body>
 </html>
