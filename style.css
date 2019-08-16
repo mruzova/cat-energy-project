@@ -1856,7 +1856,7 @@ input[type='number']:focus {
   }
   .small,
   .big {
-    height: 33%;
+    height: 40%;
     position: static;
   }
   .line li:not(.show-item) {
