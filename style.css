@@ -1560,7 +1560,6 @@ input[type='number']:focus {
   }
   .table table {
     padding-top: 0%;
-    float: right;
   }
   .table caption {
     text-align: left;
@@ -1856,13 +1855,13 @@ input[type='number']:focus {
   }
   .small,
   .big {
-    height: 50%;
     position: static;
   }
+
   .line li:not(.show-item) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
   }
 }
